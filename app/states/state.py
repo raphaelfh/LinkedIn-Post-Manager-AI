@@ -29,8 +29,7 @@ class DashboardState(rx.State):
 
     @rx.event
     async def on_load(self):
-        if not self.posts:
-            await self._fetch_posts()
+        return self._fetch_posts
 
     async def _fetch_posts(self):
         self.db_connection_status = "connecting"

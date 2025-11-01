@@ -33,7 +33,7 @@ class CreatePostState(rx.State):
 
     @rx.event
     def on_load_posts(self):
-        pass
+        return
 
     @rx.var
     def character_count(self) -> int:

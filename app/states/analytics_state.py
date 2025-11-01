@@ -19,8 +19,7 @@ class AnalyticsState(rx.State):
 
     @rx.event
     async def on_load_analytics(self):
-        if not self.posts:
-            await self._fetch_posts()
+        return self._fetch_posts
 
     async def _fetch_posts(self):
         try:

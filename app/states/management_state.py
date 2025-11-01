@@ -12,8 +12,7 @@ class ManagementState(rx.State):
 
     @rx.event
     async def on_load_posts(self):
-        if not self.posts:
-            await self._fetch_posts()
+        return self._fetch_posts
 
     async def _fetch_posts(self):
         try:
